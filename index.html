@@ -10,47 +10,50 @@
     <title>Love Maths</title>
 </head>
 <body>
+    <!-- Heading -->
     <h1 class="heading">
         <img class="logo" src="assets/images/logo.png" alt="Love Maths logo">    
         Love Maths
     </h1>
 
     <main>
+        <!-- Main game area wrapper -->
         <div id="game-area">
 
             <!-- Maths operations -->
-             <div id="operations-wrapper">
-                <div id="addition" class="operator">
-                    <button>+</button>
-                    <p>Addition</p>
-                </div>
+             <div id="operations-area">
+                <button class="btn btn--big btn--green operator">
+                    <i class="fas fa-plus"></i>
+                </button>
 
-                <div id="subtraction" class="operator">
-                    <button>-</button>
-                    <p>Subtraction</p>
-                </div>
+                <button class="btn btn--big btn--blue operator">
+                    <i class="fas fa-minus"></i>
+                </button>
 
-                <div id="multiply" class="operator">
-                    <button>x</button>
-                    <p>Multiplication</p>
-                </div>
+                <button class="btn btn--big btn--orange operator">
+                    <i class="fas fa-times"></i>
+                </button>
 
-                <div id="division" class="operator">
-                    <button>/</button>
-                    <p>Division</p>
-                </div>
+                <button class="btn btn--big btn--red operator">
+                    <i class="fas fa-divide"></i>
+                </button>
             </div>
 
-            <!-- Output message -->
-             <div id="output">
-                2 + 2 = 5
+            <!-- Question area -->
+             <div id="question-area">
+               <span id="operand1">0</span>
+               <span id="operator">x</span>
+               <span id="operand2">1</span>
+               <span>=</span>
+               <p class="answer-message">Enter Answer:</p>
+               <input type="number" id="answer-box">
              </div>
-
-             <!-- Submit button -->
-              <button id="submit">Submit answer</button>
-
+             
+             <!-- Submit answer button -->
+             <button class="btn btn--gray">Submit Answer</button>
         </div>
 
+        <!-- Score area -->
         <div id="score-area">
             <p class="scores">Correct Answers <span id="score">0</span></p>
             <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
