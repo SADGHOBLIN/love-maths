@@ -1,0 +1,57 @@
+/* Google Fonts, import Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    margin: auto;
+    padding: 2rem;
+    width: 60%;
+
+    /* layout */
+    border: 2px solid red;;
+}
+
+#operations-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.operator {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    /* layout */
+    border: 2px solid blue;
+}
+
+#output {
+    align-self: center;
+}
+
+#submit {
+    width: 60%;
+    align-self: center;
+}
