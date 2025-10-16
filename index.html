@@ -22,19 +22,19 @@
 
             <!-- Maths operations -->
              <div id="operations-area">
-                <button class="btn btn--big btn--green operator">
+                <button data-type="addition" class="btn btn--big btn--green operator">
                     <i class="fas fa-plus"></i>
                 </button>
 
-                <button class="btn btn--big btn--blue operator">
+                <button data-type="subtraction" class="btn btn--big btn--blue operator">
                     <i class="fas fa-minus"></i>
                 </button>
 
-                <button class="btn btn--big btn--orange operator">
+                <button data-type="multiplication" class="btn btn--big btn--orange operator">
                     <i class="fas fa-times"></i>
                 </button>
 
-                <button class="btn btn--big btn--red operator">
+                <button data-type="division" class="btn btn--big btn--purple operator">
                     <i class="fas fa-divide"></i>
                 </button>
             </div>
@@ -46,11 +46,11 @@
                <span id="operand2">1</span>
                <span>=</span>
                <p class="answer-message">Enter Answer:</p>
-               <input type="number" id="answer-box">
+               <input type="number" class="answer-box">
              </div>
              
              <!-- Submit answer button -->
-             <button class="btn btn--gray">Submit Answer</button>
+             <button data-type="submit" class="btn btn--gray">Submit Answer</button>
         </div>
 
         <!-- Score area -->
