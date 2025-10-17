@@ -37,7 +37,7 @@ body {
     box-sizing: border-box;
     height: 65vh;
     width: 85%;
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     background-color: #F55D3E;
 }
@@ -174,4 +174,46 @@ body {
 .btn--gray:active,
 .btn--gray:hover {
     background-color: #0d1013;
+}
+
+/* ---------- Media Queries */
+@media (max-width: 1200px) {
+    #game-area {
+        width: 95%;
+    }
+}
+
+@media (max-width: 426px) {
+    #game-area {
+        width: 95%;
+        height: 75vh;
+        margin-top: 2rem;
+        gap: 2rem;
+        justify-content: flex-start;
+    }
+
+    #operations-area {
+        flex-wrap: wrap;
+        font-size: 0.5rem;
+        gap: 0;
+    }
+
+    .btn {
+        margin: 3rem 2rem;
+    }
+
+    .btn--big {
+        padding-top: 15px;
+        border-radius: 50%;
+        border: 6px solid;
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+
+    .btn--big::after {
+        font-size: 0.9rem;
+        letter-spacing: 0.2px;
+        top: 2rem;
+    }
 }
