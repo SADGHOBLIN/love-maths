@@ -1,4 +1,4 @@
-// Wait for DOM loading
+// Wait for DOM loading, and run game upon load
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -39,20 +39,20 @@ function runGame(gameType) {
  * with the same game type
  */
 function checkAnswer() {
-    
     let userAnswer = parseInt(document.getElementById("answer-box").value);
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
         alert("You're right!");
+        incrementScore();
     } else {
         alert(`Sorry, wrong answer. You answered ${userAnswer}, but the correct answer was ${calculatedAnswer[0]}!`);
+        incrementWrongAnswer();
         }
     
     document.getElementById("answer-box").value = "";
     runGame(calculatedAnswer[1]);
-
 }
 
 /**
@@ -71,11 +71,23 @@ function calculateCorrectAnswer() {
     }
 }
 
+/**
+ * Gets the current score from the DOM and increments it
+ * by 1 when the user gets a correct answer
+ */
 function incrementScore() {
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
 
 }
 
+/**
+ * Gets the current number of incorrect answers from the DOM
+ * and increments it by 1 on incorrect user input
+ */
 function incrementWrongAnswer() {
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
 
 }
 
