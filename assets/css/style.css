@@ -80,7 +80,7 @@ body {
     display: none;
 }
 
-.answer-box {
+#answer-box {
     height: 40px;
     width: 80px;
 }
